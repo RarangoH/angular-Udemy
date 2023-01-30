@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { Router } from 'express';
+
 import { switchMap } from 'rxjs';
 import { IHeroe } from '../../interfaces/heroes.interface';
 import { HeroesService } from '../../services/heroes.service';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-heroe',
@@ -17,12 +18,12 @@ import { HeroesService } from '../../services/heroes.service';
   
   ]
 })
-export class HeroeComponent implements OnInit {
+export class HeroeComponent  {
 
 
 heroe!:IHeroe;
 
-constructor(private ac:ActivatedRoute, private heroesService:HeroesService, private router:Router){}
+constructor(private ac:ActivatedRoute, private heroesService:HeroesService){}
 
   ngOnInit(): void {
     
